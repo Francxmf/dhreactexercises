@@ -1,14 +1,13 @@
 import React from "react";
-import { Message } from "./Message";
-import { Hello } from "./Hello";
+import { Welcome } from "./Welcome";
+
 
 export class App extends React.Component{
-    render(){
-        return (
-          <div>
-            <Hello />
-            <Message />
-          </div>
-        );
-    }
+  render(){
+      return (
+        <div>
+          <Welcome name="Mr.McNugget"/>
+        </div>
+      );
+  }
 }
