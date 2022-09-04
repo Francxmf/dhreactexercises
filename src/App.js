@@ -6,10 +6,11 @@ export class App extends React.Component{
   render(){
       return (
         <div>
-          <Welcome name={<strong>Poweruser</strong>} age={69} />
+          <Welcome name={<strong>Poweruser</strong>} age={64} />
         </div>
       );
   }
 } 
 
-//tested: without the ageprop the line doesn't render with the default. 
+//tested inputs: 18(n), 19(y) - 64(y), 65(n);  works as expected. 
+
