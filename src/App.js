@@ -6,11 +6,11 @@ export class App extends React.Component{
   render(){
       return (
         <div>
-          <Welcome name={<strong>Poweruser</strong>} age={64} />
+          <Welcome name={"John"} age={64} />
         </div>
       );
   }
 } 
 
-//tested inputs: 18(n), 19(y) - 64(y), 65(n);  works as expected. 
+// tested by changing the name prop at line -9 : anything that's not the string "John" will not print the age line
 
