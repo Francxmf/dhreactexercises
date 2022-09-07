@@ -15,7 +15,7 @@ export class App extends React.Component{
           <InteractiveWelcome />
           <Counter initialValue={0} />
           <ClickTracker />    
-          <Login passFunc= {this.onLogin}/>
+          <Login passFunction= {this.onLogin}/>
         </div>
       );
   }

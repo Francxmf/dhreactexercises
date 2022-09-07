@@ -26,7 +26,7 @@ export class Login extends React.Component {
     );
   };
   loginButtonHandler = (event) => {
-     this.props.passFunc(this.state)
+     this.props.passFunction(this.state)
   };
 
   render() {
