@@ -1,2 +1,0 @@
-# DHreactexercises
-Develhope react exercises
