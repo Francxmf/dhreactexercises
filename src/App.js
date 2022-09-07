@@ -1,16 +1,17 @@
 import React from "react";
-import { Welcome } from "./Welcome";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Counter } from "./Counter";
 import { ClickTracker } from "./ClickTracker";
+
 
 
 export class App extends React.Component{
   render(){
       return (
         <div>
-          <Welcome name={"Mjr. Sandwich"} age={18} />
+          <InteractiveWelcome />
           <Counter initialValue={0} />
-          <ClickTracker />
+          <ClickTracker />      
         </div>
       );
   }
