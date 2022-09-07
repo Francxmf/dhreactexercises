@@ -5,13 +5,15 @@ import { ClickTracker } from "./ClickTracker";
 
 
 
+
 export class App extends React.Component{
   render(){
       return (
         <div>
           <InteractiveWelcome />
           <Counter initialValue={0} />
-          <ClickTracker />      
+          <ClickTracker />    
+          
         </div>
       );
   }
