@@ -2,7 +2,7 @@ import React from "react";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Counter } from "./Counter";
 import { ClickTracker } from "./ClickTracker";
-import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 
 export class App extends React.Component{
@@ -15,7 +15,7 @@ export class App extends React.Component{
           <InteractiveWelcome />
           <Counter initialValue={0} />
           <ClickTracker />    
-          <Login passFunction= {this.onLogin}/>
+          <UncontrolledLogin passFunction = {this.onLogin}/> 
         </div>
       );
   }
