@@ -28,10 +28,18 @@ export class Login extends React.Component {
   loginButtonHandler = (event) => {
      this.props.passFunction(this.state)
   };
+  resetButtonHandler = (event)=>{
+    this.setState({
+        username : "",
+        password : "",
+        remember : false
+    })
+  }
 
   render() {
     return (
       <div>
+        <h2> User login:</h2>
         <input
           name="username"
           onChange={this.loginInputsHandler}
@@ -49,9 +57,8 @@ export class Login extends React.Component {
           onChange={this.loginInputsHandler}
           checked={this.state.remember}
         />
-        <button disabled={this.state.disabled} onClick={this.loginButtonHandler}>
-          Login
-        </button>
+        <button disabled={this.state.disabled} onClick={this.loginButtonHandler}>Login</button>
+        <button onClick={this.resetButtonHandler}>reset</button>
       </div>
     );
   }
