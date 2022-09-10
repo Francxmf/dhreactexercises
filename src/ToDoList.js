@@ -5,6 +5,7 @@ export class ToDoList extends React.Component {
     items: ["todo1", "todo2", "todo3"],
     todo: "",
   };
+  
   inputFieldHandler = (event) => {
     this.setState({
       todo: event.target.value,
