@@ -20,6 +20,11 @@ export class ToDoList extends React.Component {
         return state2.items
     }));
   };
+  resetBtnHandler = ()=>{
+    this.setState({
+        items : []
+    })
+  }
 
   render() {
     return (
@@ -37,6 +42,9 @@ export class ToDoList extends React.Component {
         />
         <button name="addbtn" onClick={this.buttonEventHandler}>
           Add to list
+        </button>
+        <button name="resetbtn" onClick={this.resetBtnHandler}>
+          Reset
         </button>
       </>
     );
