@@ -5,7 +5,14 @@ export class ToDoList extends React.Component {
     items: ["todo1", "todo2", "todo3"],
     todo: "",
   };
-  
+
+  deleteLitemHandler = (event) => {
+    const pressedBtn = event.target.name
+    this.setState(
+      (state) => {},
+      () => this.setState((state) => state.items.splice(pressedBtn, 1))
+    );
+  }
   inputFieldHandler = (event) => {
     this.setState({
       todo: event.target.value,
@@ -32,7 +39,7 @@ export class ToDoList extends React.Component {
         <h2>To do list:</h2>
         <ul>
           {this.state.items.map((todo, index) => (
-            <li key={index}>{todo}</li>
+            <li key={index}>{todo} <button name={index} onClick={this.deleteLitemHandler}>remove</button></li>
           ))}
         </ul>
         <input
