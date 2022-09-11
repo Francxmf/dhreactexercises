@@ -6,15 +6,39 @@ import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
 //import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 
 
 export class App extends React.Component{
   onLogin(state){
     console.log(state)
   }
+  state = {
+    language : "en"
+  }
+  LangChangeHandler = (event)=> {
+    this.setState({
+      language : event.target.value
+    })
+  }
+
   render(){
       return (
         <Container title="Welcome aboard!">
+           <div>
+           <select
+             value={this.state.language}
+             onChange={this.LangChangeHandler}
+           >
+             <option value="en">English</option>
+             <option value="it">Italiano</option>
+           </select>
+         </div>
+         <LanguageContext.Provider value={this.state.language}>
+           <DisplayLanguage currentLang = {this.state.language} />
+         </LanguageContext.Provider>
+
           <InteractiveWelcome />
           <Counter initialValue={0} />
           <ClickTracker />    
