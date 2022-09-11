@@ -19,7 +19,22 @@ export class App extends React.Component{
           <Counter initialValue={0} />
           <ClickTracker />    
           <Login passFunction = {this.onLogin}/> 
-          <ToDoList />
+          <ToDoList render={(items, del) => {
+             return (
+               <>
+                 <ul>
+                   {items.map((todo, index) => (
+                     <li key={index}>
+                       {todo}{" "}
+                       <button name={index} onClick={del}>
+                         remove
+                       </button>
+                     </li>
+                   ))}
+                 </ul>
+               </>
+             );
+           }}/>
         </Container>
       );
   }
