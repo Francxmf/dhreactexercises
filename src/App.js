@@ -1,10 +1,11 @@
 import React from "react";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
 //import { UncontrolledLogin } from "./UncontrolledLogin";
-import { ToDoList } from "./ToDoList"
+import { ToDoList } from "./ToDoList";
 
 
 export class App extends React.Component{
@@ -13,13 +14,13 @@ export class App extends React.Component{
   }
   render(){
       return (
-        <div>
+        <Container>
           <InteractiveWelcome />
           <Counter initialValue={0} />
           <ClickTracker />    
           <Login passFunction = {this.onLogin}/> 
           <ToDoList />
-        </div>
+        </Container>
       );
   }
 } 
