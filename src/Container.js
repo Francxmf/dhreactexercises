@@ -4,12 +4,13 @@ import React from "react";
    render() {
      const containerStyle = {
        backgroundColour: "white",
-       border: "3px solid red",
+       border: "2px solid red",
        padding: "1rem"
      };
 
      return (
        <div style={containerStyle}>
+         <div>{this.props.title}</div>
          <div>{this.props.children}</div>
        </div>
      );

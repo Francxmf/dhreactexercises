@@ -14,7 +14,7 @@ export class App extends React.Component{
   }
   render(){
       return (
-        <Container>
+        <Container title="Welcome aboard!">
           <InteractiveWelcome />
           <Counter initialValue={0} />
           <ClickTracker />    
