@@ -25,9 +25,7 @@ export class App extends React.Component{
 
   render(){
       return (
-        <Container title="Welcome aboard!">
-           
-
+        <Container title="FRANCESCO'S REACT EXERCISES APP">
           <Welcome age={29} />
           <Counter initialValue={0} />
           <ClickTracker />    
