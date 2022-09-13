@@ -4,7 +4,7 @@ import React from "react";
    render() {
      const containerStyle = {
        backgroundColour: "white",
-       border: "2px solid red",
+       border: "2px solid crimson",
        padding: "1rem"
      };
 

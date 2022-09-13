@@ -38,12 +38,12 @@ export class Login extends React.Component {
 
   render() {
     const logBtnStyle = {
-      backgroundColor : this.state.password.length <= 8 ? "red" : "green",
+      backgroundColor : this.state.password.length <= 8 ? "crimson" : "teal",
       color : "white"
     }
     return (
       <div>
-        <h2> User login:</h2>
+        <h2> - User login:</h2>
         <input
           name="username"
           onChange={this.loginInputsHandler}

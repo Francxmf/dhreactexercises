@@ -14,7 +14,7 @@ export class ClickTracker extends React.Component {
   render() {
     return (
       <div>
-        <h2> Press a button below!</h2>
+        <h2>- Press a button below!</h2>
         <button onClick={this.clickEventHandler}>
           1st button
         </button>

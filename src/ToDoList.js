@@ -36,7 +36,7 @@ export class ToDoList extends React.Component {
   render() {
     return (
       <>
-        <h2>To do list:</h2> 
+        <h2>- To do list:</h2> 
          {this.props.render(this.state.items, this.deleteLitemHandler)}
         <input
           name="todo"
