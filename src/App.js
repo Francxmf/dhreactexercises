@@ -1,10 +1,9 @@
 import React from "react";
-import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
-//import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
@@ -39,7 +38,7 @@ export class App extends React.Component{
            <DisplayLanguage currentLang = {this.state.language} />
          </LanguageContext.Provider>
 
-          <InteractiveWelcome />
+          <Welcome age={29} />
           <Counter initialValue={0} />
           <ClickTracker />    
           <Login passFunction = {this.onLogin}/> 
