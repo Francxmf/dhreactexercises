@@ -26,10 +26,12 @@ export class App extends React.Component{
   render(){
       return (
         <Container title="FRANCESCO'S REACT EXERCISES APP">
-          <Welcome age={29} />
+          <Welcome age={29} />      
+
           <Counter initialValue={0} />
           <ClickTracker />    
           <Login passFunction = {this.onLogin}/> 
+
           <ToDoList render={(items, del) => {
              return (
                <>
@@ -46,7 +48,9 @@ export class App extends React.Component{
                </>
              );
            }}/>
-           <Sum numbers={[3, 6, 9]} />
+
+           <Sum/>
+
            <div>
             <h2>- Choose a language:</h2>
            <select
@@ -60,6 +64,7 @@ export class App extends React.Component{
          <LanguageContext.Provider value={this.state.language}>
            <DisplayLanguage currentLang = {this.state.language} />
          </LanguageContext.Provider>
+
         </Container>
       );
   }
