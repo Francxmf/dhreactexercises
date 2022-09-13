@@ -2,8 +2,8 @@ import React from "react";
 import { LanguageContext } from "./LanguageContext";
 
  const strings = {
-     en : {selected_Lang : "English (USENG)"},
-     it : {selected_Lang : "Italiano (ITA)"},
+     en : {selected_Lang : "Long live the Q..King!"},
+     it : {selected_Lang : "Verità per Giulio Regeni!"},
 
  }
 
