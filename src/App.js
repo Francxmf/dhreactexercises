@@ -46,6 +46,7 @@ export class App extends React.Component{
                </>
              );
            }}/>
+           <Sum numbers={[3, 6, 9]} />
            <div>
             <h2>- Choose a language:</h2>
            <select

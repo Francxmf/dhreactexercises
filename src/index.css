@@ -4,6 +4,10 @@
     padding: 1rem;
 }
 
-h1,h2,h3,li {
-    color: teal;
+h1 {
+    color:darkslategray;
+}
+
+h2,h3,li {
+    color: crimson;
 }
