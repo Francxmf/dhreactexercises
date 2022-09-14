@@ -8,6 +8,7 @@ import { ToDoList } from "./ToDoList";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
+import { GithubUser } from "./GithubUser";
 
 
 export class App extends React.Component{
@@ -36,7 +37,7 @@ export class App extends React.Component{
           <h2>- Press the button to start the timer!</h2>
           <button onClick={this.hideCounter}>Play / Stop</button>
           {this.state.count && <Counter />}
-          
+
           <ClickTracker />    
           <Login passwordFunction = {this.onLogin}/> 
 
@@ -71,6 +72,8 @@ export class App extends React.Component{
          <LanguageContext.Provider value={this.state.language}>
            <DisplayLanguage currentLang = {this.state.language} />
          </LanguageContext.Provider>
+
+         <GithubUser username="Francxmf" /> 
 
         </Container>
       );

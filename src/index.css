@@ -16,3 +16,7 @@ button:active {
    background-color: darkslategray;
    color: gold;
 }
+
+p {
+    color: darkslategray;
+}
