@@ -1,7 +1,7 @@
 import React from "react";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
-import { Counter } from "./Counter";
+import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
 import { ToDoList } from "./ToDoList";
@@ -28,7 +28,7 @@ export class App extends React.Component{
         <Container title="FRANCESCO'S REACT EXERCISES APP">
           <Welcome age={29} />      
 
-          <Counter initialValue={0} />
+          <ClickCounter initialValue={0} />
           <ClickTracker />    
           <Login passFunction = {this.onLogin}/> 
 
@@ -51,8 +51,7 @@ export class App extends React.Component{
 
            <Sum/>
 
-           <div>
-            <h2>- Choose a language:</h2>
+          <div> <h2>- Choose a language:</h2>
            <select
              value={this.state.language}
              onChange={this.LangChangeHandler}

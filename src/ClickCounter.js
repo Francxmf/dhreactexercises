@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
-export class ClickCounter extends React.Component {
-  render() {
+
+export function ClickCounter({initialValue}){
+    const [counter, setCounter ] = useState(initialValue)
+    
+    function IncrementHandler(){
+      setCounter(num => num + 1)
+    }
+
+    
     return (
       <div>
-        <CounterDisplay constDisplayCount = {this.props.onscreenCounter}/>
-        <button onClick={this.props.updaterProp}>Add one!</button>
+        <h2>- Add one and see the counter rise! </h2>
+        <button onClick={IncrementHandler}>Add one</button>
+        <CounterDisplay onscreenCounter= {counter} />
       </div>
-    );
-  }
-}
+    ) 
+};

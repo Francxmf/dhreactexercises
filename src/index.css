@@ -4,10 +4,15 @@
     padding: 1rem;
 }
 
-h1 {
+h1,li {
     color:darkslategray;
 }
 
-h2,h3,li {
+h2,h3 {
     color: crimson;
+}
+
+button:active {
+   background-color: darkslategray;
+   color: gold;
 }
