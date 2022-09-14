@@ -15,7 +15,7 @@ export function GithubUser({username}){
     }
     useEffect(() => {getApi(username)}, [username])
     return (<div>
-        <h1>My github data:</h1>
+        <h1>github data:</h1>
         <p>Username: {dataApi.name}</p>
         <p>Location: {dataApi.location}</p>
         <p>Bio: {dataApi.bio}</p>       

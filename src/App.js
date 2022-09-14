@@ -9,6 +9,7 @@ import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { GithubUser } from "./GithubUser";
+import { GithubUserlist } from "./GithubUserlist";
 
 
 export class App extends React.Component{
@@ -72,9 +73,8 @@ export class App extends React.Component{
          <LanguageContext.Provider value={this.state.language}>
            <DisplayLanguage currentLang = {this.state.language} />
          </LanguageContext.Provider>
-
-         <GithubUser username="Francxmf" /> 
-
+          
+         <GithubUserlist />
         </Container>
       );
   }
