@@ -1,18 +1,15 @@
-import React from "react";
-import { ClickCounter } from "./ClickCounter";
+import React, {useState, useEffect} from "react";
 
-export class Counter extends React.Component {
-    state = {
-      count: this.props.initialValue,
-    };
-    constructor(state){
-      super(state)
-      this.updateCounter = (event) => {
-        return (this.setState((state) => (state.count += 1)));
-      };
+export function Counter(){
+  const [counter, setCounter] = useState(0)
+  function setAll(){
+    console.log("Counter mounts")
+    setInterval(() => setCounter(c => c+1), 1000)
+    return () => {
+      console.log(`Getting unmounts`)
     }
-    
-   render(){
-    return <ClickCounter onscreenCounter={this.state.count} updaterProp={this.updateCounter}/>
-   }
+  }
+
+  useEffect(setAll, [])
+  return <h1>Counter: {counter} </h1>
 }

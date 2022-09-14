@@ -1,7 +1,7 @@
 import React from "react";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
-import { ClickCounter } from "./ClickCounter";
+import { Counter } from "./Counter";
 import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
 import { ToDoList } from "./ToDoList";
@@ -15,7 +15,8 @@ export class App extends React.Component{
     console.log(state)
   }
   state = {
-    language : "en"
+    language : "en",
+    count : true
   }
   LangChangeHandler = (event)=> {
     this.setState({
@@ -23,12 +24,19 @@ export class App extends React.Component{
     })
   }
 
+  hideCounter = () => {
+    this.setState((state)=> state.count = !state.count)
+  }
+
   render(){
       return (
         <Container title="FRANCESCO'S REACT EXERCISES APP">
           <Welcome age={29} />      
 
-          <ClickCounter initialValue={0} />
+          <h2>- Press the button to start the timer!</h2>
+          <button onClick={this.hideCounter}>Play / Stop</button>
+          {this.state.count && <Counter />}
+          
           <ClickTracker />    
           <Login passwordFunction = {this.onLogin}/> 
 
