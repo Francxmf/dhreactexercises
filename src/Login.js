@@ -1,69 +1,59 @@
-import React from "react";
+import { useState } from "react";
 
-export class Login extends React.Component {
-  state = {
+export function Login({ passwordFunction }) {
+  const [data, setData] = useState({
     username: "",
-    remember: false,
     password: "",
+    remember: false,
     disabled: true,
-  };
-  loginInputsHandler = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    const checked = event.target.checked;
-    const type = event.target.type;
-    this.setState(
-      {
+  });
+  function userInputsHandler(event) {
+    const { name, type, checked, value } = event.target;
+
+    setData((data) => {
+      return {
+        ...data,
         [name]: type === "checkbox" ? checked : value,
-      },
-      () =>
-        this.setState({
-          disabled:
-            this.state.username !== "" && this.state.password !== ""
-              ? false
-              : true,
-        })
-    );
-  };
-  loginButtonHandler = (event) => {
-     this.props.passFunction(this.state)
-  };
-  resetButtonHandler = (event)=>{
-    this.setState({
-        username : "",
-        password : "",
-        remember : false
-    })
+      };
+    });
   }
 
-  render() {
-    const logBtnStyle = {
-      backgroundColor : this.state.password.length <= 8 ? "crimson" : "teal",
-      color : "white"
-    }
-    return (
-      <div>
-        <h2> - User login:</h2>
-        <input
-          name="username"
-          onChange={this.loginInputsHandler}
-          value={this.state.username}
-        />
-        <input
-          name="password"
-          type="password"
-          onChange={this.loginInputsHandler}
-          value={this.state.password}
-        />
-        <input
-          name="remember"
-          type="checkbox"
-          onChange={this.loginInputsHandler}
-          checked={this.state.remember}
-        />
-        <button style={logBtnStyle} disabled={this.state.disabled} onClick={this.loginButtonHandler}>Login</button>
-        <button onClick={this.resetButtonHandler}>reset</button>
-      </div>
-    );
+  function loginBtnHandler() {
+    passwordFunction(data);
   }
+  function clearAll() {
+    setData({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  }
+  return (
+    <form>
+      <h2>- User login:</h2>
+      <input
+        value={data.username}
+        onChange={userInputsHandler}
+        name="username"
+      ></input>
+      <input
+        value={data.password}
+        onChange={userInputsHandler}
+        type="password"
+        name="password"
+      ></input>
+      <input
+        value={data.remember}
+        onChange={userInputsHandler}
+        name="remember"
+        type="checkbox"
+      ></input>
+      <button type="button" onClick={loginBtnHandler}>
+        Login
+      </button>
+      <button type="button" onClick={clearAll}>
+        Clear fields
+      </button>
+    </form>
+  );
 }

@@ -30,7 +30,7 @@ export class App extends React.Component{
 
           <ClickCounter initialValue={0} />
           <ClickTracker />    
-          <Login passFunction = {this.onLogin}/> 
+          <Login passwordFunction = {this.onLogin}/> 
 
           <ToDoList render={(items, del) => {
              return (
