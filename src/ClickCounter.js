@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { CounterDisplay } from "./CounterDisplay";
+import { UseCounter } from "./UseCounter";
 
 
 export function ClickCounter({initialValue}){
-    const [counter, setCounter ] = useState(initialValue)
+  const {counter, IncrementHandler, DecrementHandler, ResetHandler }=UseCounter(initialValue)
     
-    function IncrementHandler(){
-      setCounter(num => num + 1)
-    }
-
     function onCounterChange(){
       console.log(`Counter currently amounts to: ${counter}`)
     }
@@ -17,9 +14,11 @@ export function ClickCounter({initialValue}){
     
     return (
       <div>
-        <h2>- Add one and see the counter rise! </h2>
-        <button onClick={IncrementHandler}>Add one</button>
+        <h2>- Count freely! </h2>
         <CounterDisplay onscreenCounter= {counter} />
+        <button onClick={IncrementHandler}> + </button>
+        <button onClick={DecrementHandler}> - </button>
+        <button onClick={ResetHandler}>Reset</button>
       </div>
-    ) 
+    );
 };

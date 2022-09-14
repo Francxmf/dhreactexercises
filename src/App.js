@@ -2,13 +2,13 @@ import React from "react";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
+import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
 import { ToDoList } from "./ToDoList";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
-import { GithubUser } from "./GithubUser";
 import { GithubUserlist } from "./GithubUserlist";
 
 
@@ -39,7 +39,8 @@ export class App extends React.Component{
           <button onClick={this.hideCounter}>Play / Stop</button>
           {this.state.count && <Counter />}
 
-          <ClickTracker />    
+          <ClickTracker />  
+          <ClickCounter initialValue={0} />  
           <Login passwordFunction = {this.onLogin}/> 
 
           <ToDoList render={(items, del) => {
