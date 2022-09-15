@@ -29,7 +29,7 @@ export class ToDoList extends React.Component {
   };
   resetBtnHandler = ()=>{
     this.setState({
-        items : []
+        items : [], todo:' '
     })
   }
 
