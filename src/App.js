@@ -75,7 +75,7 @@ export class App extends React.Component{
            <DisplayLanguage currentLang = {this.state.language} />
          </LanguageContext.Provider>
           
-         <GithubUserlist />
+          <GithubUserlist /> 
         </Container>
       );
   }
