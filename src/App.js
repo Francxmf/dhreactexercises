@@ -9,7 +9,7 @@ import { ToDoList } from "./ToDoList";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
-import { GithubUserlist } from "./GithubUserlist";
+import { GithubUser} from "./GithubUser";
 
 
 export class App extends React.Component{
@@ -75,7 +75,7 @@ export class App extends React.Component{
            <DisplayLanguage currentLang = {this.state.language} />
          </LanguageContext.Provider>
           
-          <GithubUserlist /> 
+          <GithubUser username="Francxmf"/> 
         </Container>
       );
   }
