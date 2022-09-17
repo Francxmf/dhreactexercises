@@ -3,7 +3,10 @@ export function Sum({numbers}) {
     numbers.forEach(num => {
         value += num
     });
-  return <h1>Array inputs sum result: {value}</h1>;
+  return <div>
+  <h2>Array inputs sum result:</h2>
+  <h1> {value} </h1>
+  </div>
 }
 
 Sum.defaultProps = {

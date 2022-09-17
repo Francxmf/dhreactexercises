@@ -64,22 +64,19 @@ export class App extends React.Component{
            <Sum/>
 
           <div> <h2>- Choose a language:</h2>
-           <select
-             value={this.state.language}
-             onChange={this.LangChangeHandler}
-           >
-             <option value="en">English</option>
-             <option value="it">Italiano</option>
+           <select value={this.state.language} onChange={this.LangChangeHandler}>
+             <option value="en">ENG</option>
+             <option value="it">ITA</option>
            </select>
          </div>
          <LanguageContext.Provider value={this.state.language}>
-           <DisplayLanguage currentLang = {this.state.language} />
+           <DisplayLanguage/>
          </LanguageContext.Provider>
           
           <GithubUser username="Francxmf"/> 
 
           <CarDetails/>
-          
+
         </Container>
       );
   }
