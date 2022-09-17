@@ -9,7 +9,8 @@ import { ToDoList } from "./ToDoList";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
-import { GithubUser} from "./GitComps/GithubUser";
+import { GithubUser } from "./GitComps/GithubUser";
+import { CarDetails } from "./CarDetails";
 
 
 export class App extends React.Component{
@@ -76,6 +77,9 @@ export class App extends React.Component{
          </LanguageContext.Provider>
           
           <GithubUser username="Francxmf"/> 
+
+          <CarDetails/>
+          
         </Container>
       );
   }
