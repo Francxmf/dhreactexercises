@@ -1,15 +1,15 @@
 import React from "react";
-import { Welcome } from "./Welcome";
+import { Welcome } from "./WelcomeComps/Welcome";
 import { Container } from "./Container";
-import { Counter } from "./Counter";
-import { ClickCounter } from "./ClickCounter";
+import { Counter } from "./Counters/Counter";
+import { ClickCounter } from "./Counters/ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Login } from "./Login";
 import { ToDoList } from "./ToDoList";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
-import { GithubUser} from "./GithubUser";
+import { GithubUser} from "./GitComps/GithubUser";
 
 
 export class App extends React.Component{
