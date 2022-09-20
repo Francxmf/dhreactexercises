@@ -12,6 +12,8 @@ import { LanguageContext } from "./LanguageContext";
 import { GithubUser } from "./GitComps/GithubUser";
 import { CarDetails } from "./CarDetails";
 import { FilteredList } from "./FilteredList";
+import { Route, Routes } from "react-router-dom";
+
 
 
 export class App extends React.Component{
@@ -35,7 +37,10 @@ export class App extends React.Component{
   render(){
       return (
         <Container title="FRANCESCO'S REACT EXERCISES APP">
-          <Welcome age={29} />      
+          
+           <Routes>
+                 <Route path="/" element={<Welcome/>}/>
+             </Routes>    
 
           <h2>- Press the button to start the timer!</h2>
           <button onClick={this.hideCounter}>Play / Stop</button>
