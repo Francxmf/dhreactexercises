@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 import { UseCounter } from "./UseCounter";
 
