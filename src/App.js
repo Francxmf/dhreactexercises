@@ -11,6 +11,7 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { GithubUser } from "./GitComps/GithubUser";
 import { CarDetails } from "./CarDetails";
+import { FilteredList } from "./FilteredList";
 
 
 export class App extends React.Component{
@@ -76,6 +77,8 @@ export class App extends React.Component{
           <GithubUser username="Francxmf"/> 
 
           <CarDetails/>
+
+          <FilteredList />
 
         </Container>
       );
