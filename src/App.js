@@ -40,11 +40,8 @@ export class App extends React.Component{
           
            <Routes>
                  <Route path="/" element={<Welcome/>}/>
-             </Routes>    
-
-          <h2>- Press the button to start the timer!</h2>
-          <button onClick={this.hideCounter}>Play / Stop</button>
-          {this.state.count && <Counter />}
+                 <Route path="/counter" element={<Counter />}/>
+            </Routes>    
 
           <ClickTracker />  
           <ClickCounter initialValue={0} />  

@@ -11,5 +11,8 @@ export function Counter(){
   }
 
   useEffect(setAll, [])
-  return <h1>Timer: {counter} </h1>
+  
+  return (<div>
+  <h1>Timer: {counter} </h1>
+          </div>)
 }
