@@ -9,10 +9,10 @@ import { ToDoList } from "./ToDoList";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
-import { GithubUser } from "./GitComps/GithubUser";
 import { CarDetails } from "./CarDetails";
 import { FilteredList } from "./FilteredList";
 import { Route, Routes } from "react-router-dom";
+import { ShowGithubUser } from "./GitComps/ShowGithubUser";
 
 
 
@@ -41,6 +41,7 @@ export class App extends React.Component{
            <Routes>
                  <Route path="/" element={<Welcome/>}/>
                  <Route path="/counter" element={<Counter />}/>
+                 <Route path="/:username" element={<ShowGithubUser />}/>
             </Routes>    
 
           <ClickTracker />  
@@ -76,7 +77,7 @@ export class App extends React.Component{
            <DisplayLanguage/>
          </LanguageContext.Provider>
           
-          <GithubUser username="Francxmf"/> 
+          
 
           <CarDetails/>
 
